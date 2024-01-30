@@ -2,8 +2,6 @@ package mainview;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Iterator;
-
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -11,20 +9,14 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
-import daoservice.DAOHttpService;
-import daoservice.DAOJsonService;
-import daoservice.LagerFXModel;
 import service.DataAccessObject;
 import service.DataTransferObject;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -127,14 +119,14 @@ public class MainViewController {
         }
         initEvents();
     }
-
+// fenster wird geschlossen
     private void initEvents() {
         if (view.getMenuBar().getComponent(0) instanceof JMenu menu) {
             if (menu.getItem(0) instanceof JMenuItem item) {
                 item.addActionListener((event) -> System.exit(0));
             }
         }
-
+// Text bei About einfügen
         if (view.getMenuBar().getComponent(2) instanceof JMenu menu) {
             if (menu.getItem(0) instanceof JMenuItem item) {
                 item.addActionListener((event) -> JOptionPane.showMessageDialog(null,
